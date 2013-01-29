@@ -1,0 +1,65 @@
+{
+    "interfaces": {
+        "sSample": {
+            "version": "1.0.0",
+            "echo": {
+                "description": "Echo everything back.",
+                "args": {
+                    "required": {
+                        "send": {
+                            "type": "string"
+                        }
+                    },
+                    "optional": {
+                        
+                    }
+                },
+                "callbacks": {
+                    "required" : {},
+                    "optional": {
+                        "success": {
+                            "description": "This function is called on success",
+                            "args": {
+                                "required": {
+                                    "reply": {
+                                        "type": "string"
+                                    }
+                                },
+                                "optional": {
+                                    
+                                }
+                            },
+                            "options" : {
+                                "cancel" : true
+                            }
+                        },
+                        "failure": {
+                            "description": "This function is called on failure",
+                            "args": {
+                                "required": {
+                                    "code": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "optional": {
+                                    "domain": {
+                                        "type": "string"
+                                    },
+                                    "detail": {
+                                        "type": "dictionary"
+                                    },
+                                    "message" : {
+                                        "type" : "string"
+                                    }
+                                }
+                            },
+                            "options" : {
+                                "cancel" : true
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

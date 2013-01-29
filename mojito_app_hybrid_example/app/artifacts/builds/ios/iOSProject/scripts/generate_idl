@@ -1,0 +1,59 @@
+#!/bin/sh
+
+#  generate_idl.sh
+#  ychromert
+#
+#  Created by Srinivas Raovasudeva on 3/7/12.
+#  Copyright (c) 2012 Yahoo! Inc. All rights reserved.
+
+generateHeader() {
+    FILE=$idl_dir/$1IDL.h
+
+cat > $FILE <<END
+
+//
+// Automatically generated @ `date`
+//
+
+extern NSString *$2IDLString;
+END
+}
+
+generateImplementation() {
+    FILE=$idl_dir/$1IDL.m
+
+json=`cat $3 | sed -e 's/\"/\\\"/g' | tr '\n' ' '`
+
+    cat > $FILE <<END
+
+//
+// Automatically generated @ `date`
+//
+
+NSString *$2IDLString = @"$json";
+END
+}
+
+capitalize_first ()          
+{                            
+    string0="$1"
+    firstchar=${string0:0:1}
+    string1=${string0:1}
+    FirstChar=`echo "$firstchar" | tr a-z A-Z`
+    echo "$FirstChar$string1"
+}
+
+idl_dir="${PROJECT_DIR}/cuppajoenews/Services/IDL"
+
+if [ -d $idl_dir ]
+then
+    for f in $idl_dir/*.json
+    do
+        o=`basename -s .json $f`
+        capName=`capitalize_first $o`
+        echo $capName
+        
+        generateHeader $capName $o
+        generateImplementation $capName $o $f
+    done
+fi

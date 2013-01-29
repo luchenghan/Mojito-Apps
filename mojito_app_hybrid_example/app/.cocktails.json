@@ -1,0 +1,15 @@
+{
+  "meta":{
+    "MojitoContext":{
+      "mojitoContext":"environment:prod-native-ycrt"
+    },
+    "PackageVersion":{
+      "packageVersion":{
+        "cuppajoenewspkg":"1.0.103"
+      }
+    },
+    "MojitoVersion":{
+      "mojitoVersion":"0.5"
+    }
+  }
+}

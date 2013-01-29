@@ -1,0 +1,33 @@
+#!/bin/bash
+# Use the shipping packages.
+# Call use_ship_packages
+# author: Anne-Lise Hassenklover
+#  Copyright Yahoo! Inc. 2012. All rights reserved.
+
+project_folder="./"
+
+# Switch to the packages-dev directory in preparation for the copy.
+cd packages-dev
+
+# Go through the items in the packages-dev dir; we only care about directories.
+for f in *
+do
+	# Only copy directories
+	if [[ -d $f ]]
+	then
+		# Remove destination folder since we want the new one.
+		rm -r -f "../$project_folder/packages/$f"
+		if [[ $f == *.tests ]]
+		then
+			# Test packages are not shipped with the app.
+			echo "skip test package: $f"
+		else
+			# Copy the minified packages to the packages dir.
+			echo "use minified package: $f"
+			mkdir "../$project_folder/packages/$f/"
+			../scripts/shared/copy_minified "$f/" "../$project_folder/packages/$f/"
+		fi
+	else
+		echo "min-skipped file: $f"
+	fi
+done

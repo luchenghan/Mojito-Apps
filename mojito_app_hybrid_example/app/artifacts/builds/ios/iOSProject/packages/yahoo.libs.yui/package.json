@@ -1,0 +1,7 @@
+{
+	"name": "yahoo.libs.yui",
+	"pkg_type": "libs",
+	"type": "libs",
+	"version": "3.4.1",
+    "dependencies" : {}
+}

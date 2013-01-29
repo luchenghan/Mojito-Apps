@@ -52,6 +52,12 @@
                 }
             },
             {
+                "build": {
+                    "debug": null,
+                    "release": null
+                }
+            },
+            {
                 "lang": {
                     "ar": {
                         "ar-JO": null,

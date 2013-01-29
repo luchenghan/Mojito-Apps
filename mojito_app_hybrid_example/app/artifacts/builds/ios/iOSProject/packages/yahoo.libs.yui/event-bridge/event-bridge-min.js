@@ -1,0 +1,1 @@
+YUI.add("event-bridge",function(b){var a=b.config.doc;b.EventBridge={deviceready:function(){b.fire("jsbridgeready");},pause:function(){b.fire("background");},resume:function(){b.fire("foreground");}};if(a.addEventListener){b.each(b.EventBridge,function(d,c){a.addEventListener(c,d,false);});}},"@VERSION@",{requires:["event-custom"]});

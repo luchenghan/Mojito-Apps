@@ -1,0 +1,1 @@
+YUI.add("db-result",function(a){function b(c){this.init(c);}b.prototype={constructor:b,init:function(c){this.added=c.added||[];this.removed=c.removed||[];this._items=c.items||[];},added:null,removed:null,_items:null};a.mix(b.prototype,a.ArrayList.prototype);a.namespace("DB").Result=b;},"@VERSION@",{requires:["arraylist"]});

@@ -1,0 +1,34 @@
+#!/bin/bash
+# Use the development packages.
+# Call use_dev_packages
+# author: Anne-Lise Hassenklover
+#  Copyright Yahoo! Inc. 2012. All rights reserved.
+
+project_folder="./"
+
+# Switch to the packages-dev directory in preparation for the copy.
+cd packages-dev
+
+# Go through the items in the packages-dev dir; we only care about directories.
+for f in *
+do
+	# Only copy directories
+	if [[ -d $f ]]
+	then
+		# Remove destination folder since we want the new one.
+		echo "use package $f"
+		rm -r -f "../$project_folder/packages/$f"
+		if [[ $f == *.tests ]]
+		then
+			# Directories ending in .tests don't have -dev appended to them.
+			mkdir "../$project_folder/packages/$f/"
+			rsync --recursive --exclude=.svn "$f/" "../$project_folder/packages/$f/"
+		else
+			# Other packages are copied with -dev appended. <<< not any more but keep this for now
+			mkdir "../$project_folder/packages/$f/"
+			rsync --recursive --exclude=.svn "$f/" "../$project_folder/packages/$f/"
+		fi
+	else
+		echo "skipped file: $f"
+	fi
+done

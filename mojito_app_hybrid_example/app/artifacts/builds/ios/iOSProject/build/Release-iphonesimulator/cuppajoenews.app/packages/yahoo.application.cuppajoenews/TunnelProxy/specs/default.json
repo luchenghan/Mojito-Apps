@@ -1,0 +1,22 @@
+{
+    "base": "tunnelProxy",
+    "instanceId": "yui_3_7_3_1_1359481619771_58",
+    "type": "TunnelProxy",
+    "id": "tunnelProxy",
+    "config": {},
+    "defaults": {
+        "config": {}
+    },
+    "definition": {},
+    "assets": {
+        "favicon.ico": "/favicon.ico"
+    },
+    "binders": {},
+    "langs": {},
+    "models": {
+        "user": "yahoo_hybrid_app_usermodel"
+    },
+    "views": {},
+    "acAddons": {},
+    "assetsRoot": "/yahoo.application.cuppajoenews/TunnelProxy/assets"
+}

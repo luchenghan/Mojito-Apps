@@ -1,0 +1,30 @@
+{
+    "type": "LazyLoad",
+    "instanceId": "yui_3_7_3_1_1359481619771_56",
+    "config": {},
+    "defaults": {},
+    "definition": {},
+    "assets": {
+        "favicon.ico": "/favicon.ico"
+    },
+    "binders": {
+        "index": "LazyLoadBinderIndex"
+    },
+    "langs": {},
+    "models": {
+        "user": "yahoo_hybrid_app_usermodel"
+    },
+    "views": {
+        "index": {
+            "content-path": "/yahoo.application.cuppajoenews/LazyLoad/views/index.hb.html",
+            "engine": "hb"
+        }
+    },
+    "controller": "LazyLoad",
+    "acAddons": [
+        "assets",
+        "params",
+        "composite"
+    ],
+    "assetsRoot": "/yahoo.application.cuppajoenews/LazyLoad/assets"
+}

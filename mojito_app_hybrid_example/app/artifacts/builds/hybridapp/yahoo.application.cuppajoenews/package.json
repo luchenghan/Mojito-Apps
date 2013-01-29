@@ -1,0 +1,20 @@
+{
+    "name": "yahoo.application.cuppajoenews",
+    "description": "Example Mojito Application",
+    "version": "1.0.103",
+    "author": {
+        "name": "Ric Allinson",
+        "email": "allinson@yahoo-inc.com"
+    },
+    "type": "application",
+    "pkg_type": "application",
+    "dependencies": {
+        "yahoo.libs.yui": "*"
+    },
+    "engines": {
+        "node": ">= 0.6.0 < 0.7.0"
+    },
+    "scripts": {
+        "start": "mojito start"
+    }
+}

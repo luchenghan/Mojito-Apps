@@ -1,0 +1,32 @@
+{
+    "query_request": {
+        "description": "The simple update query that returns update true/false. 1 = snapshot name 2 = snaptshot tag 3 = local version",
+        "prod": "http://www.no_where.com:80/pkgUpdater/v1/snapshots/%1$s/tags/%2$s/queryUpdate?local_version=%3$s",
+        "dev": "http://localhost:3000/pkgUpdater/v1/snapshots/%1$s/tags/%2$s/queryUpdate?local_version=%3$s"
+    },
+    "fast_update_request": {
+        "description": "The fast update request with 1 = snapshot name 2 = snaptshot tag 3 = local version and the required packages separated by %2C commas (4 = required) and local_hash=hex-number hash of all of the package names/versions (5 = hash)",
+        "prod": "http://www.no_where.com:80/pkgUpdater/v1/snapshots/%1$s/tags/%2$s/fastUpdate?local_version=%3$s&local_hash=%5$s&required_packages=%4$s",
+        "dev": "http://localhost:3000/pkgUpdater/v1/snapshots/%1$s/tags/%2$s/fastUpdate?local_version=%3$s&local_hash=%5$s&required_packages=%4$s"
+    },
+    "update_request": {
+        "description": "The full update request with the the listed packages in the POST. 1 = snapshot name 2 = snaptshot tag",
+        "prod": "http://www.no_where.com:80/pkgUpdater/v1/snapshots/%1$s/tags/%2$s/update?local_version=%3$s",
+        "dev": "http://localhost:3000/pkgUpdater/v1/snapshots/%1$s/tags/%2$s/update?local_version=%3$s"
+    },
+    "package_storage_server": {
+        "description": "The hosts where the update packages are served in compressed format.",
+        "prod": "https://www.ychromertapp.yahoo.com",
+        "dev": "http://localhost:3000/pkgServer/v1/"
+    },
+    "initialQueryWaitSeconds": {
+        "description": "The number of seconds to wait before starting the first update query (after launching) for package updates.",
+        "prod": 90,
+        "dev": 10
+    },
+    "updateQueryIntervalSeconds": {
+        "description": "The number of seconds to wait between update queries or before querying again for a package update.",
+        "prod": 3600,
+        "dev": 20
+    }
+}

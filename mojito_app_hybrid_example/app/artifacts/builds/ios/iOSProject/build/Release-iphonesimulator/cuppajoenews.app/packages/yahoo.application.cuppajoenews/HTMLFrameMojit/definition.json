@@ -1,0 +1,26 @@
+{
+    "type": "HTMLFrameMojit",
+    "instanceId": "yui_3_7_3_1_1359481619771_57",
+    "config": {},
+    "defaults": {},
+    "definition": {
+        "yui": {
+            "sharedYUIInstance": true
+        }
+    },
+    "assets": {
+        "favicon.ico": "/favicon.ico"
+    },
+    "binders": {},
+    "langs": {},
+    "models": {
+        "user": "yahoo_hybrid_app_usermodel"
+    },
+    "views": {
+        "index": {
+            "engine": "hb"
+        }
+    },
+    "acAddons": {},
+    "assetsRoot": "/yahoo.application.cuppajoenews/HTMLFrameMojit/assets"
+}

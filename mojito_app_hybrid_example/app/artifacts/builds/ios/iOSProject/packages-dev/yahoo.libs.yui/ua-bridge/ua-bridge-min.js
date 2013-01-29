@@ -1,0 +1,1 @@
+YUI.add("ua-bridge",function(c){var b=c.config.win,a=(b&&b.device)?b.device:false;c.mix(c.UA,{model:a.name||null,uuid:a.uuid||null});},"@VERSION@",{requires:["yui"]});

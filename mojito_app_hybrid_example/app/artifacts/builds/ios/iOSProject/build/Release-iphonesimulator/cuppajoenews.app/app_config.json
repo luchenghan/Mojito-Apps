@@ -1,0 +1,15 @@
+{
+    "description": "Configured by CocktailsIDE",
+    "application_snapshot_name": "cuppajoenews",
+    "application_local_version": "ReservedVersion",
+    "application_snapshot_tag": "2013_01_29_09_46_54_918",
+    "sPackage": {
+        "environment": "dev",
+        "query_request": "http://localhost:3000/pkgUpdater/v1/snapshots/%1$s/tags/%2$s/queryUpdate?local_version=%3$s",
+        "fast_update_request": "http://localhost:3000/pkgUpdater/v1/snapshots/%1$s/tags/%2$s/fastUpdate?local_version=%3$s&local_hash=%5$s&required_packages=%4$s",
+        "update_request": "http://localhost:3000/pkgUpdater/v1/snapshots/%1$s/tags/%2$s/update?local_version=%3$s",
+        "package_storage_server": "http://localhost:3000/pkgServer/v1/",
+        "initialQueryWaitSeconds": 10,
+        "updateQueryIntervalSeconds": 20
+    }
+}

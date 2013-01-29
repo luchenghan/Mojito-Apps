@@ -1,0 +1,59 @@
+{
+    "type": "yahoo.hybrid.infinite_nav",
+    "instanceId": "yui_3_7_3_1_1359481706121_55",
+    "config": {
+        "assets": {
+            "top": {
+                "css": [
+                    "./screen.css"
+                ]
+            }
+        }
+    },
+    "defaults": {
+        "config": {
+            "assets": {
+                "top": {
+                    "css": [
+                        "./screen.css"
+                    ]
+                }
+            }
+        }
+    },
+    "definition": {},
+    "assets": {
+        "favicon.ico": "/favicon.ico",
+        "apple-app-icon.png": "/yahoo.application.cuppajoenews/yahoo.hybrid.infinite_nav/assets/apple-app-icon.png",
+        "screen.css": "/yahoo.application.cuppajoenews/yahoo.hybrid.infinite_nav/assets/screen.css",
+        "spinner.gif": "/yahoo.application.cuppajoenews/yahoo.hybrid.infinite_nav/assets/spinner.gif",
+        "y.png": "/yahoo.application.cuppajoenews/yahoo.hybrid.infinite_nav/assets/y.png",
+        "yl.png": "/yahoo.application.cuppajoenews/yahoo.hybrid.infinite_nav/assets/yl.png"
+    },
+    "binders": {
+        "index": "yahoo_infinite_nav_binder_index",
+        "loader": "yahoo_infinite_nav_binder_loader"
+    },
+    "langs": {},
+    "models": {
+        "user": "yahoo_hybrid_app_usermodel"
+    },
+    "views": {
+        "index": {
+            "content-path": "/yahoo.application.cuppajoenews/yahoo.hybrid.infinite_nav/views/index.hb.html",
+            "engine": "hb"
+        },
+        "loader": {
+            "content-path": "/yahoo.application.cuppajoenews/yahoo.hybrid.infinite_nav/views/loader.hb.html",
+            "engine": "hb"
+        }
+    },
+    "controller": "yahoo_infinite_nav",
+    "acAddons": [
+        "models",
+        "assets",
+        "params",
+        "composite"
+    ],
+    "assetsRoot": "/yahoo.application.cuppajoenews/yahoo.hybrid.infinite_nav/assets"
+}

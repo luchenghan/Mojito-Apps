@@ -1,0 +1,18 @@
+{
+    "type": "yahoo.hybrid.app_specs",
+    "instanceId": "yui_3_7_3_1_1359481619771_52",
+    "config": {},
+    "defaults": {},
+    "definition": {},
+    "assets": {
+        "favicon.ico": "/favicon.ico"
+    },
+    "binders": {},
+    "langs": {},
+    "models": {
+        "user": "yahoo_hybrid_app_usermodel"
+    },
+    "views": {},
+    "acAddons": {},
+    "assetsRoot": "/yahoo.application.cuppajoenews/yahoo.hybrid.app_specs/assets"
+}

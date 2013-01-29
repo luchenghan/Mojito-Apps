@@ -1,50 +1,91 @@
 [
     {
-        "settings": [ "master" ],
-
-        "shareYUIInstance": true,
-
+        "settings": [
+            "master"
+        ],
         "staticHandling": {
-            "prefix": "",
+            "prefix": "static",
             "appName": "yahoo.hybrid.app",
             "frameworkName": "yahoo.hybrid.mojito"
         },
         "builds": {
-            "html5app": {
-                "-forceRelativePaths": true,
-                "-urls": [
-                    "/yahoo.application.mojito_app_hybrid_example/index.html"
-                ]
+            "hybridapp": {
+                "forceRelativePaths": false,
+                "urls": [
+                    "/yahoo.application.cuppajoenews/index.html"
+                ],
+                "packages": {
+                    "yahoo.libs.yui": "3.4.1"
+                }
             }
+        },
+        "yui": {
+            "debug": false,
+            "logLevel": "error",
+            "fetchCSS": false
         }
     },
     {
-        "settings": [ "environment:prod-native" ],
-
+        "settings": [
+            "environment:prod-native"
+        ],
         "yui": {
-            "dependencyCalculations" : "ondemand",
+            "dependencyCalculations": "ondemand",
             "base": "/$$staticHandling.prefix$$/yahoo.libs.yui/assets/",
             "url": "$$yui.base$$yui/yui-min.js",
             "loader": "loader/loader-min.js"
         }
     },
     {
-        "settings": [ "environment:prod-native-ycrt" ],
-
-        "yui": {
-            "base": "/yahoo.libs.yui/assets/"
-        },
+        "settings": [
+            "environment:prod-native-ycrt"
+        ],
         "builds": {
+            "hybridapp": {
+                "forceRelativePaths": false,
+                "urls": [
+                    "/yahoo.application.cuppajoenews/index.html"
+                ],
+                "packages": {
+                    "yahoo.libs.yui": "*"
+                }
+            },
             "html5app": {
                 "urls": [
-                    "/yahoo.application.mojito_app_hybrid_example/index.html"
+                    "/yahoo.application.cuppajoenews/index.html"
                 ]
             }
+        },
+        "yui": {
+            "config": {
+                "seed": [
+                    "/yahoo.libs.yui/yui-base/yui-base-min.js",
+                    "/yahoo.libs.yui/loader-base/loader-base-min.js",
+                    "loader-yui3-resolved{langPath}",
+                    "loader-app",
+                    "loader-app-resolved{langPath}"
+                ],
+                "base": "/yahoo.libs.yui/",
+                "combine": false,
+                "root": "",
+                "groups": {
+                    "app": {
+                        "combine": false,
+                        "base": "//yahoo.com",
+                        "root": ""
+                    }
+                }
+            }
+        },
+        "staticHandling": {
+            "appName": "yahoo.application.cuppajoenews",
+            "prefix": "yahoo.application.cuppajoenews"
         }
     },
     {
-        "settings": [ "environment:prod-webapp" ],
-
+        "settings": [
+            "environment:prod-webapp"
+        ],
         "builds": {
             "html5app": {
                 "forceRelativePaths": true

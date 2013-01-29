@@ -1,0 +1,8 @@
+{
+    "name": "cuppajoenews",
+    "tag": "2013_01_29_09_48_21_272",
+    "packages": {
+        "yahoo.libs.yui": "*",
+        "yahoo.application.cuppajoenews": "1.0.103"
+    }
+}
